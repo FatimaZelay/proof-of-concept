@@ -1,0 +1,12 @@
+:root {
+    --gold: #E3B101;
+    --magenta: #AB2676;
+    --blue: #466EC0;
+    --red: #B22A1E;
+    --teal: #22A586;
+  
+    --bg-light: #f7f7f7;
+    --text-dark: #222;
+    --text-gray: #555;
+    --radius: 8px;
+  }
