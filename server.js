@@ -33,3 +33,11 @@ app.get('/', async function (request, response) {
     // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
     response.redirect(303, '/')
   })  
+// Stel het poortnummer in waar Express op moet gaan luisteren
+// Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
+app.set('port', process.env.PORT || 8000)
+
+// Start Express op, gebruik daarbij het zojuist ingestelde poortnummer op
+app.listen(app.get('port'), function () {
+console.log(`Server running at http://localhost:${app.get('port')}`)
+})
