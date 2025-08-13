@@ -19,3 +19,11 @@ app.engine('liquid', engine.express())
 
 // Stel de map met Liquid templates in
 // Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
+app.get('/', async function (request, response) {
+    const apiResponse = await fetch ('https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,image,img.width,img.height&sort=id');
+  
+    const apiResponseJSON = await apiResponse.json ();
+     // Render index.liquid uit de Views map
+     // Geef hier eventueel data aan mee
+     response.render('index.liquid');
+  }); 
