@@ -24,3 +24,12 @@
     display: flex;
     min-height: 100vh;
   }
+  /* Sidebar */
+  aside {
+    background: var(--gold);
+    color: white;
+    padding: 2rem 1rem;
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+  }
