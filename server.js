@@ -27,3 +27,9 @@ app.get('/', async function (request, response) {
      // Geef hier eventueel data aan mee
      response.render('index.liquid');
   }); 
+
+  app.post('/', async function (request, response) {
+    // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt
+    // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
+    response.redirect(303, '/')
+  })  
