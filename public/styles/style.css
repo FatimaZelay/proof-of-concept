@@ -10,3 +10,17 @@
     --text-gray: #555;
     --radius: 8px;
   }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    display: flex;
+    min-height: 100vh;
+  }
