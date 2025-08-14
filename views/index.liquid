@@ -62,6 +62,38 @@
       </article>
     </section>
   </main>
+<script>
+// Replace skeleton with real content after 2s
+setTimeout(() => {
+  document.getElementById("cardGrid").innerHTML = `
+    <article class="card" data-category="cycling">
+      <img src="bicicletta.png" alt="Una bicicletta usata da restaurare insieme">
+      <div class="content">
+        <h3>A used bicycle</h3>
+      </div>
+    </article>
+    <article class="card" data-category="friends">
+      <img src="" alt="Create a list for your best friend">
+      <div class="content">
+        <h3>Create a list for your best friend</h3>
+      </div>
+    </article>
+    <article class="card" data-category="movies">
+      <img src="" alt="">
+      <div class="content">
+        <h3>A cinema card</h3>
+      </div>
+    </article>
+    <article class="card" data-category="plants">
+      <img src="" alt="">
+      <div class="content">
+        <h3>A tropical plant</h3>
+      </div>
+    </article>
+  `;
+}, 2000);
+</script>
+
 </body>
 </html>
 
