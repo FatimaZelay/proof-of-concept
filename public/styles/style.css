@@ -57,6 +57,12 @@
     gap: 1rem;
     transition: all 0.3s ease-in-out;
   }
+  
+  .card {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
   /* Responsive */
   @media (min-width: 481px) {
     body {
