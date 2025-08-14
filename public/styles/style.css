@@ -65,6 +65,12 @@
     padding: 1rem 2rem;
   }
   
+  header {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
   .btn {
     background: var(--teal);
     color: white;
