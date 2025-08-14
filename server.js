@@ -1,4 +1,3 @@
-console.log('Hier komt je server voor Sprint 12.')
 // Importeer het npm package Express (uit de door npm aangemaakte node_modules map)
 // Deze package is geïnstalleerd via `npm install`, en staat als 'dependency' in package.json
 import express from 'express'
@@ -19,6 +18,7 @@ app.engine('liquid', engine.express())
 
 // Stel de map met Liquid templates in
 // Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
+app.set('views', './views')
 app.get('/', async function (request, response) {
     const apiResponse = await fetch ('https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,image,img.width,img.height&sort=id');
   
