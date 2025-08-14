@@ -57,6 +57,14 @@
     height: 32px;
     cursor: pointer;
   }
+  .btn {
+    background: var(--teal);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
   #category-filter {
     appearance: none;
     -webkit-appearance: none;
