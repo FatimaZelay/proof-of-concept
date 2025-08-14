@@ -33,6 +33,20 @@
     display: flex;
     flex-direction: column;
   }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 0.5rem 0.75rem;
+    background: white;
+    margin-bottom: 2rem;
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+  }
   #category-filter {
     appearance: none;
     -webkit-appearance: none;
