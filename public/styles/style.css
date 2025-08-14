@@ -57,6 +57,14 @@
     height: 32px;
     cursor: pointer;
   }
+  
+  
+  /* Main content */
+  main {
+    flex: 1;
+    padding: 1rem 2rem;
+  }
+  
   .btn {
     background: var(--teal);
     color: white;
