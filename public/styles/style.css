@@ -47,6 +47,16 @@
     outline: none;
     flex: 1;
   }
+  
+  .search-bar button {
+    background: var(--magenta);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
   #category-filter {
     appearance: none;
     -webkit-appearance: none;
