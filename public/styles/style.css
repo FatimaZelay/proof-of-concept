@@ -65,6 +65,13 @@
     border-radius: var(--radius);
     cursor: pointer;
   }
+  
+  .user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ccc;
+  }
   #category-filter {
     appearance: none;
     -webkit-appearance: none;
