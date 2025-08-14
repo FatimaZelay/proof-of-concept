@@ -72,6 +72,12 @@
   .card .content {
     padding: 1rem;
   }
+  
+  .card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
   /* Responsive */
   @media (min-width: 481px) {
     body {
