@@ -68,6 +68,10 @@
     height: 150px;
     object-fit: cover;
   }
+  
+  .card .content {
+    padding: 1rem;
+  }
   /* Responsive */
   @media (min-width: 481px) {
     body {
