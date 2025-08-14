@@ -17,7 +17,17 @@
       <div class="user-icon"></div>
     </header>
 
-    <div class="filter-bar">Filter ▼</div>
+    <div class="filter-bar">
+      <form action="" method="get">
+        <select id="category-filter" name="category">
+          <option value="all">Filter</option>
+          <option value="cycling">Cycling</option>
+          <option value="friends">Friends</option>
+          <option value="movies">Movies</option>
+          <option value="plants">Plants</option>
+        </select>
+      </form>
+    </div>
 
     <section class="card-grid">
       <article class="card">
