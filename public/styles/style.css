@@ -79,3 +79,13 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+  
+  @media (min-width: 1025px) {
+    aside {
+      flex: 0 0 260px;
+      padding: 2rem 1rem;
+    }
+    .card-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+  }
