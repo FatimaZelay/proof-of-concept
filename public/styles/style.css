@@ -50,6 +50,13 @@
   #category-filter:hover {
     background: var(--magenta);
   }
+  /* Cards */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
   /* Responsive */
   @media (min-width: 481px) {
     body {
