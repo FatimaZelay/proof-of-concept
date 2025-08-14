@@ -72,6 +72,14 @@
     border-radius: 50%;
     background: #ccc;
   }
+  
+  /* Filter dropdown */
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
   #category-filter {
     appearance: none;
     -webkit-appearance: none;
