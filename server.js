@@ -35,9 +35,31 @@ app.get('/', async function (request, response) {
   })  
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
+  try {
+
+    const apiResponse = await fetch(
+      'https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,image.id&sort=id'
+    );
+
+    const apiResponseJSON = await apiResponse.json();
+
+    // Render index.liquid met productList
+    response.render('index.liquid', { productList });
+
+  } catch (error) {
+    console.error('Fout bij ophalen producten:', error);
+    response.status(500).send('Error');
+  }
+});
+
+
+app.post('/', async function (request, response) {
+  response.redirect(303, '/')
+})
+
+
 app.set('port', process.env.PORT || 8000)
 
 // Start Express op, gebruik daarbij het zojuist ingestelde poortnummer op
 app.listen(app.get('port'), function () {
-console.log(`Server running at http://localhost:${app.get('port')}`)
 })
