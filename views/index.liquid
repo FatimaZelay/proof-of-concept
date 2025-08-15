@@ -1,4 +1,5 @@
 {% include 'partials/head.liquid' %}
+{% include 'partials/head.liquid', producten: productList % %}
 <body>
 
   <aside>
@@ -58,13 +59,22 @@
         <img src="" alt="">
       <article class="card skeleton">
         <div class="skeleton-img"></div>
+    {% endfor %}
+  {% else %}
+    {% for product in productList %}
+      <article class="card">
+        <img src="{{ product.image }}" alt="{{ product.name }}">
         <div class="content">
           <h3>A tropical plant</h3>
           <div class="skeleton-text long"></div>
+          <h3>{{ product.name }}</h3>
         </div>
       </article>
     </section>
   </main>
+    {% endfor %}
+  {% endif %}
+</section>
 
 <script>
 // Replace skeleton with real content after 2s
