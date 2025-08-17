@@ -24,3 +24,11 @@ function filterCards(category) {
     updateCards();
   }
 }
+  btn.addEventListener('click', () => {
+    btn.classList.add('spinning');
+
+    // Remove the class after animation finishes
+    setTimeout(() => {
+      btn.classList.remove('spinning');
+    }, 1000); // Match animation duration
+  });
