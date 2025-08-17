@@ -47,6 +47,25 @@
 
       <article class="card" data-category="movies">
         <img src="" alt="">
+  <section class="card-grid" id="cardGrid">
+    {% if productList and productList.size > 0 %}
+      {% for product in productList %}
+        <article class="card">
+          {% if product.image %}
+            <img
+              src="{{ product.image }}"
+              alt="{{ product.name }}"
+              onerror src="https://via.placeholder.com/300x200?text=No+Image">
+          {% else %}
+            <img src="https://via.placeholder.com/300x200?text=No+Image" alt="{{ product.name }}">
+          {% endif %}
+          <div class="content">
+            <h3>{{ product.name }}</h3>
+            <small style="color: #666;">€{{ product.amount }}</small>
+          </div>
+        </article>
+      {% endfor %}
+    {% else %}
       <article class="card skeleton">
         <div class="skeleton-img"></div>
         <div class="content">
