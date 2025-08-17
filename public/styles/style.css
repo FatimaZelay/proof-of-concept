@@ -150,6 +150,26 @@
     margin-bottom: 0.5rem;
   }
   
+  .search-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .search-btn svg {
+    transition: transform 0.3s;
+  }
+  
+  .search-btn.spinning svg {
+    animation: spin 1s linear;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
   /* Responsive */
   @media (min-width: 481px) {
     body {
