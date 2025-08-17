@@ -13,7 +13,6 @@
       </svg>
     </button>
   </div>
-  
 </aside>
  
 <main>
@@ -21,7 +20,6 @@
     <button class="btn">Create your List</button>
     <div class="user-icon"></div>
   </header>
- 
   <div class="filter-bar">
     <form action="" method="get">
       <select id="category-filter" name="category">
@@ -32,29 +30,28 @@
         <option value="plants">Plants</option>
       </select>
     </form>
-  </div>
-  <div class="filter-bar">
+
     <form action="" method="get">
-      <select id="category-filter" name="category">
+      <select id="who-filter" name="who">
         <option value="all">For who</option>
-        <option value="cycling">kids</option>
-        <option value="friends">woman</option>
-        <option value="movies">men</option>
-        <option value="plants">elderly</option>
+        <option value="kids">Kids</option>
+        <option value="woman">Woman</option>
+        <option value="men">Men</option>
+        <option value="elderly">Elderly</option>
       </select>
     </form>
-  </div>
-  <div class="filter-bar">
+
     <form action="" method="get">
-      <select id="category-filter" name="category">
-        <option value="all">Price</option>
-        <option value="cycling">5-15</option>
-        <option value="friends">15-50</option>
-        <option value="movies">50-80</option>
-        <option value="plants">80-100</option>
+      <select id="price-filter" name="price">
+        <option value="all">Price Range</option>
+        <option value="5-15">5-15</option>
+        <option value="15-50">15-50</option>
+        <option value="50-80">50-80</option>
+        <option value="80-100">80-100</option>
       </select>
     </form>
   </div>
+
   <section class="card-grid" id="cardGrid">
     {% if productList and productList.size > 0 %}
       {% for product in productList %}
@@ -84,4 +81,5 @@
     {% endif %}
   </section>
 </main>
+
 
