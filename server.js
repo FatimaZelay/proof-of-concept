@@ -36,11 +36,8 @@ app.get('/', async function (request, response) {
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
   try {
-
-    const apiResponse = await fetch(
-      'https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,image.id&sort=id'
-    );
-
+ 
+    const apiResponse = await fetch('https://fdnd-agency.directus.app/items/milledoni_products/?fields=*&sort=id');
     const apiResponseJSON = await apiResponse.json();
 
     // Render index.liquid met productList
