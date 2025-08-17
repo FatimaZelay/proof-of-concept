@@ -40,10 +40,21 @@
   }
   
   .logo {
-
-    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;      /* space between image and text */
+    font-size: 2rem;
+    font-weight: bold;
+    justify-content: center;
+    margin-bottom: 1rem;
   }
-
+  
+  .logo img {
+    width: 300px;     /* adjust size as needed */
+    height: auto;
+    display: block;
+  }
+  
   .tagline {
     font-size: 1.5rem;
    background: var(--blue);
