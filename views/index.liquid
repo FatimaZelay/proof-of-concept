@@ -1,52 +1,60 @@
 {% include 'partials/head.liquid' %}
-{% include 'partials/head.liquid', producten: productList % %}
-<body>
-
-  <aside>
-    <div class="logo">MILLEDONI</div>
-    <div class="tagline">Finding and sharing gifts ideas</div>
-    <h2>I’m looking for a gift for...</h2>
-    <div class="search-bar">
-      <input type="text" placeholder="Today I want gift for Dreamers">
-      <button></button>
-    </div>
-  </aside>
-
-  <main>
-    <header>
-      <button class="btn">Create your List</button>
-      <div class="user-icon"></div>
-    </header>
-
-    <div class="filter-bar">
-      <form action="" method="get">
-        <select id="category-filter" name="category">
-          <option value="all">Filter</option>
-          <option value="cycling">Cycling</option>
-          <option value="friends">Friends</option>
-          <option value="movies">Movies</option>
-          <option value="plants">Plants</option>
-        </select>
-      </form>
-    </div>
-
-    <section class="card-grid">
-      <article class="card" data-category="cycling">
-        <img src="bicicletta.png" alt="Una bicicletta usata da restaurare insieme">
-        <div class="content">
-          <h3>A used bicycle</h3>
-        </div>
-      </article>
-
-      <article class="card" data-category="friends">
-        <img src="" alt="Create a list for your best friend">
-        <div class="content">
-          <h3>Create a list for your best friend</h3>
-        </div>
-      </article>
-
-      <article class="card" data-category="movies">
-        <img src="" alt="">
+ 
+<aside>
+  <div class="logo">MILLEDONI</div>
+  <div class="tagline">Finding and sharing gifts ideas</div>
+  <h2>I'm looking for a gift for...</h2>
+  <div class="search-bar">
+    <input type="text" placeholder="Today I want gift for Dreamers">
+    <button class="search-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </button>
+  </div>
+  
+</aside>
+ 
+<main>
+  <header>
+    <button class="btn">Create your List</button>
+    <div class="user-icon"></div>
+  </header>
+ 
+  <div class="filter-bar">
+    <form action="" method="get">
+      <select id="category-filter" name="category">
+        <option value="all">Category</option>
+        <option value="cycling">Cycling</option>
+        <option value="friends">Friends</option>
+        <option value="movies">Movies</option>
+        <option value="plants">Plants</option>
+      </select>
+    </form>
+  </div>
+  <div class="filter-bar">
+    <form action="" method="get">
+      <select id="category-filter" name="category">
+        <option value="all">For who</option>
+        <option value="cycling">kids</option>
+        <option value="friends">woman</option>
+        <option value="movies">men</option>
+        <option value="plants">elderly</option>
+      </select>
+    </form>
+  </div>
+  <div class="filter-bar">
+    <form action="" method="get">
+      <select id="category-filter" name="category">
+        <option value="all">Price</option>
+        <option value="cycling">5-15</option>
+        <option value="friends">15-50</option>
+        <option value="movies">50-80</option>
+        <option value="plants">80-100</option>
+      </select>
+    </form>
+  </div>
   <section class="card-grid" id="cardGrid">
     {% if productList and productList.size > 0 %}
       {% for product in productList %}
@@ -69,64 +77,11 @@
       <article class="card skeleton">
         <div class="skeleton-img"></div>
         <div class="content">
-          <h3>A cinema card</h3>
+          <h3>Loading products...</h3>
           <div class="skeleton-text short"></div>
         </div>
       </article>
-
-      <article class="card" data-category="plants">
-        <img src="" alt="">
-      <article class="card skeleton">
-        <div class="skeleton-img"></div>
-    {% endfor %}
-  {% else %}
-    {% for product in productList %}
-      <article class="card">
-        <img src="{{ product.image }}" alt="{{ product.name }}">
-        <div class="content">
-          <h3>A tropical plant</h3>
-          <div class="skeleton-text long"></div>
-          <h3>{{ product.name }}</h3>
-        </div>
-      </article>
-    </section>
-  </main>
-    {% endfor %}
-  {% endif %}
-</section>
-
-<script>
-// Replace skeleton with real content after 2s
-setTimeout(() => {
-  document.getElementById("cardGrid").innerHTML = `
-    <article class="card" data-category="cycling">
-      <img src="bicicletta.png" alt="Una bicicletta usata da restaurare insieme">
-      <div class="content">
-        <h3>A used bicycle</h3>
-      </div>
-    </article>
-    <article class="card" data-category="friends">
-      <img src="" alt="Create a list for your best friend">
-      <div class="content">
-        <h3>Create a list for your best friend</h3>
-      </div>
-    </article>
-    <article class="card" data-category="movies">
-      <img src="" alt="">
-      <div class="content">
-        <h3>A cinema card</h3>
-      </div>
-    </article>
-    <article class="card" data-category="plants">
-      <img src="" alt="">
-      <div class="content">
-        <h3>A tropical plant</h3>
-      </div>
-    </article>
-  `;
-}, 2000);
-</script>
-
-</body>
-</html>
+    {% endif %}
+  </section>
+</main>
 
